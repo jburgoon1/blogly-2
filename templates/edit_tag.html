@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block title%} New Post {%endblock%}
+{%block content%}
+<form action="/user/{{user.id}}/{{tag.id}}/edit" method="POST">
+<input type="text" name = "title" placeholder="{{tag.title}}" value = "{{tag.title}}">
+<button>Update</button>
+<button>Cancel</button>
+</form>
+{%endblock%}

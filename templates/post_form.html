@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block title%} New Post {%endblock%}
+{%block content%}
+<form action="/user/{{user.id}}/new-post" method="POST">
+<input type="text" name = "title" placeholder="Post Title">
+<input type="text" name = "content" placeholder="Post content">
+<button>Create</button>
+<button>Cancel</button>
+
+{%for tags in user.tag%}
+<input type="checkbox" name="{{tag.name}}" id=""> {{tags.name}}
+</form>
+{%endfor%}
+{%endblock%}
