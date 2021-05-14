@@ -4,7 +4,11 @@
 <h1>{{post.title}}</h1>
 <p>{{post.content}}</p>
 <h2>By: {{user.first_name}} {{user.last_name}}</h2>
-
+<ul>
+    {%for tags in combine%}
+    <li>{{tags.tag.name}}</li>
+    {%endfor%}
+</ul>
 <form action="/user/{{user.id}}">
     <button>Cancel</button>
 </form>

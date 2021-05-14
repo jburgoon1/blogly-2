@@ -7,8 +7,14 @@
 <button>Create</button>
 <button>Cancel</button>
 
-{%for tags in user.tag%}
-<input type="checkbox" name="{{tag.name}}" id=""> {{tags.name}}
-</form>
+<h1>Tags:</h1>
+<ul>
+{%for tags in tag%}
+<li>
+<input type="checkbox" name="tags" id="" value={{tags.id}}> {{tags.name}}
+</li>
 {%endfor%}
+</ul>
+</form>
+
 {%endblock%}

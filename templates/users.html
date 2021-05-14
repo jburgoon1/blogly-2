@@ -9,5 +9,10 @@
 <form action="/add_new">
 <button>Add new User</button>
 </form>
-
+<h2>Tags:</h2>
+<ul>
+{%for tags in tag%}
+<li><a href="/{{tags.id}}">{{tags.name}}</a></li>
+{%endfor%}
+</ul>
 {%endblock%}
